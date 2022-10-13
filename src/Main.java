@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         int[] weight = new int[10];
@@ -28,11 +30,12 @@ public class Main {
             System.out.print(number[a] + ",");
         }
         System.out.println();
-        for (int b = 0; b < 3; b++) {
+        for (int b = 0; b < number.length; b++) {
             if (number[b] % 2 != 0) {
-                number[b]++;
-                System.out.print(number [b]+", ");}
+                number[b]+=1;
             }
+        }
+        System.out.println(Arrays.toString(number));
         System.out.println();
         System.out.println("задание 1.2");
         //Массив, в котором можно хранить три дробных числа – 1.57, 7.654, 9.986 –  сразу заполнив его значениями.
@@ -49,11 +52,15 @@ public class Main {
         // Самостоятельно выберите способ создания массива: с помощью ключевого слова или сразу заполненный элементами.
         int[] leapYear = {2000, 2004, 2008, 2012};
         for (int i = 0; i < leapYear.length; i++) {
-            System.out.print(leapYear[i] + ", ");
+            System.out.print(leapYear[i]);
+            if (i!= leapYear.length-1);{
+            System.out.print(", ");
+            }
         }
         System.out.println();
         for (int d = leapYear.length - 1; d >= 0; d--) {
             System.out.print(leapYear[d] + ", ");
+
         }
 
 
